@@ -1,16 +1,5 @@
-# codechallengemousa
+A. i started by creating my design pattern stracure with view model ,web service , model , view files , then created config file where i put my urls and the size config tto use in the view file ,then i worked on the popsmac.yaml file to load and setup my assets and packges
+B.I used the MVVM design pattren becuse its easier parallel development of a UI and the building blocks that power it and using MVVM make proforming unit tost alot easier, also using MVVM makes the code reusable
+C.There where no images loader used because I used the default amage.assetto fill the images as the image is small.
+D. using sqlite because it is th most used and famous in mobile development when saving large number of data  on the local device and provide faster inserts, updates, and queries compared to other local persistence solutions.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
