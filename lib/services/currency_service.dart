@@ -8,6 +8,7 @@ import 'package:codechallengemousa/data/database_helpers.dart';
 class CurrencyService extends BaseService {
   List<CountryCurrency> currencies = [];
   Map<String, dynamic> currencyHistory = {};
+  Map<String, dynamic> currencyConvert = {};
 
   Future checkDataFromDBAndGetData() async {
     hasError = false;
@@ -75,6 +76,28 @@ class CurrencyService extends BaseService {
       super.error = error;
     }, queryParams: body);
   }
+
+  Future getCurrenciesConvert(
+      String convertCurrencies) async {
+    hasError = false;
+
+    Map<String, dynamic> body = {};
+    body['q'] = convertCurrencies;
+    body['compact'] = 'ultra';
+    body['apiKey'] = API_KEY;
+
+    await baseAppClient.get(GET_CURRENCIES_HISTORY,
+        onSuccess: (dynamic body, int statusCode) {
+          currencyConvert.clear();
+          if (body != null) {
+            currencyConvert = body;
+          }
+        }, onFailure: (String error, int statusCode) {
+          hasError = true;
+          super.error = error;
+        }, queryParams: body);
+  }
+
 
   Future readFromDB() async {
     log('Read Complete Data');

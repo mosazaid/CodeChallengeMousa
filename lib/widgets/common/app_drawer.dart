@@ -3,6 +3,7 @@ import 'package:codechallengemousa/widgets/screens/currency_list_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/SizeConfig.dart';
+import '../screens/currency_converter_page.dart';
 import '../screens/currency_history_page.dart';
 
 class AppDrawer extends StatefulWidget {
@@ -50,7 +51,7 @@ class _AppDrawerState extends State<AppDrawer> {
               onTap: () {
                 Navigator.pop(context);
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => const CurrencyListPage()));
+                    builder: (context) => const CurrencyConverterPage()));
               },
             ),
           ]),
