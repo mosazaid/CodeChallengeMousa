@@ -5,5 +5,7 @@ B.I used the MVVM design pattren becuse its easier parallel development of a UI 
 
 
 C.There where no images loader used because I used the default amage.assetto fill the images as the image is small.
+
+
 D. using sqlite because it is th most used and famous in mobile development when saving large number of data  on the local device and provide faster inserts, updates, and queries compared to other local persistence solutions.
 
